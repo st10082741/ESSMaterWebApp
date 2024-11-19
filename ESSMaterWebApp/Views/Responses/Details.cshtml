@@ -1,0 +1,72 @@
+﻿@model ESSMaterWebApp.Models.Response
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Response</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Response1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Response1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SubmissionDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SubmissionDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StronglyDisagree)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StronglyDisagree)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Disagree)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Disagree)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Neutral)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Neutral)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Agree)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Agree)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StronglyAgree)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StronglyAgree)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ResponseQuestion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ResponseQuestion.QuestionId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ResponseQuestionnaire)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ResponseQuestionnaire.QuestionnaireId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ResponseId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

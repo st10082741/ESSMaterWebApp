@@ -1,0 +1,83 @@
+﻿@model IEnumerable<ESSMaterWebApp.Models.Response>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Response1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubmissionDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StronglyDisagree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Disagree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Neutral)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Agree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StronglyAgree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResponseQuestion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResponseQuestionnaire)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Response1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubmissionDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StronglyDisagree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Disagree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Neutral)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Agree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StronglyAgree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResponseQuestion.QuestionId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResponseQuestionnaire.QuestionnaireId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ResponseId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ResponseId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ResponseId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
